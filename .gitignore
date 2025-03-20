@@ -1,0 +1,27 @@
+# Editor directories and files
+.vscode
+.idea
+*.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python
+.env
+.venv
+env
+venv
+ENV
+env.bak
+venv.bak
+*__pycache__
+*.manifest
+*.spec
+*.so
+*.dll
+
+# Build
+dist
+build
