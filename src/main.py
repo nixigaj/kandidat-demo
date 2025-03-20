@@ -12,6 +12,8 @@ class MyWidget(QtWidgets.QWidget):
 	def __init__(self):
 		super().__init__()
 
+		self.setWindowTitle("Kandidat demo")
+
 		self.button = QtWidgets.QPushButton("Calculate")
 		self.text = QtWidgets.QLabel("Click the calculate button to calculate 1 + 2 with Rust",
 									 alignment=QtCore.Qt.AlignCenter)
@@ -49,12 +51,12 @@ class MyWidget(QtWidgets.QWidget):
 
 if __name__ == "__main__":
 	app = QtWidgets.QApplication([])
-	app.setApplicationName("kandidat-demo")
-	app.setApplicationDisplayName("Kandidat demo")
+	#app.setApplicationName("kandidat-demo")
+	#app.setApplicationDisplayName("Kandidat demo")
 
 	widget = MyWidget()
 	widget.resize(800, 600)
-	widget.setMinimumSize(400, 400)
+	widget.setMinimumSize(400, 200)
 	widget.show()
 
 	sys.exit(app.exec())

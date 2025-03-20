@@ -1,5 +1,7 @@
 # Kandidat demo
 
+![Screenshot](screenshot.png)
+
 ## Requirements
 - Git
 - Python 3.11+
