@@ -30,3 +30,8 @@ python3 build.py
 ```
 
 The build will be in the `dist/` directory.
+
+## Clean environment
+```console
+python3 build.py clean
+```
