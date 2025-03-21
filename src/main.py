@@ -51,12 +51,12 @@ class MyWidget(QtWidgets.QWidget):
 
 if __name__ == "__main__":
 	app = QtWidgets.QApplication([])
-	app.setApplicationName("kandidat-demo")
-	app.setApplicationDisplayName("Kandidat demo")
+	#app.setApplicationName("kandidat-demo")
+	#app.setApplicationDisplayName("Kandidat demo")
 
 	widget = MyWidget()
 	widget.resize(800, 600)
-	widget.setMinimumSize(400, 400)
+	widget.setMinimumSize(400, 200)
 	widget.show()
 
 	sys.exit(app.exec())
