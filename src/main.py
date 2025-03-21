@@ -12,6 +12,8 @@ class MyWidget(QtWidgets.QWidget):
 	def __init__(self):
 		super().__init__()
 
+		self.setWindowTitle("Kandidat demo")
+
 		self.button = QtWidgets.QPushButton("Calculate")
 		self.text = QtWidgets.QLabel("Click the calculate button to calculate 1 + 2 with Rust",
 									 alignment=QtCore.Qt.AlignCenter)
