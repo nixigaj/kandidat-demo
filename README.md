@@ -28,3 +28,5 @@ python src/main.py
 ```console
 python3 build.py
 ```
+
+The build will be in the `dist/` directory.
