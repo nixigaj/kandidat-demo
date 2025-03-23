@@ -5,7 +5,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 # Rust module
 from kandidat_demo_rust import sum_as_string
-from windows import setup_win_theme_handler
+from windows import setup_win11_theme_handler, is_windows_11
 
 class MyWidget(QtWidgets.QWidget):
 	def __init__(self):
@@ -24,8 +24,8 @@ class MyWidget(QtWidgets.QWidget):
 		self.button.clicked.connect(self.magic)
 
 		self.menu_bar = QtWidgets.QMenuBar()
-		if sys.platform == "win32":
-			self.theme_manager = setup_win_theme_handler(self.menu_bar)
+		if is_windows_11():
+			self.theme_manager = setup_win11_theme_handler(self.menu_bar)
 
 		file_menu = self.menu_bar.addMenu("File")
 
