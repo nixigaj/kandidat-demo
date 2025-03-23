@@ -1,4 +1,4 @@
-import platform
+import sys
 import darkdetect
 import threading
 from PySide6 import QtCore
@@ -49,9 +49,5 @@ def setup_win11_theme_handler(target_menu_bar):
 	manager.theme_changed.connect(manager.apply_theme)
 	return manager
 
-
 def is_windows_11():
-	if platform.system() != "Windows":
-		return False
-	version, _, build = platform.win32_ver()[1:4]
-	return version == '10' and int(build) >= 22000
+	return sys.platform == "win32" and sys.getwindowsversion().build >= 22000
