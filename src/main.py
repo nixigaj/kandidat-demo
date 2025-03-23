@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
 import sys
-import random
 from PySide6 import QtCore, QtWidgets, QtGui
 
 # Rust module
 from kandidat_demo_rust import sum_as_string
-
+from windows import setup_win_theme_handler
 
 class MyWidget(QtWidgets.QWidget):
 	def __init__(self):
@@ -25,6 +24,9 @@ class MyWidget(QtWidgets.QWidget):
 		self.button.clicked.connect(self.magic)
 
 		self.menu_bar = QtWidgets.QMenuBar()
+		if sys.platform == "win32":
+			self.theme_manager = setup_win_theme_handler(self.menu_bar)
+
 		file_menu = self.menu_bar.addMenu("File")
 
 		new_action = QtGui.QAction("New", self)
@@ -51,8 +53,9 @@ class MyWidget(QtWidgets.QWidget):
 
 if __name__ == "__main__":
 	app = QtWidgets.QApplication([])
-	#app.setApplicationName("kandidat-demo")
-	#app.setApplicationDisplayName("Kandidat demo")
+	app.setApplicationName("kandidat-demo")
+	app.setApplicationDisplayName("Kandidat demo")
+	#app.setStyle("Fusion")
 
 	widget = MyWidget()
 	widget.resize(800, 600)

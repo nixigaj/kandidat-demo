@@ -21,6 +21,7 @@ venv.bak
 *.spec
 *.so
 *.dll
+*.pyd
 
 # Build
 dist
